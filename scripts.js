@@ -3,7 +3,7 @@ function App() {
         el: 'canvas',
         gravity: -0.2,
         nx: 100,
-        ny: 40,
+        ny: 50,
 
         size: 2,
         stiffness: 5,
@@ -73,7 +73,7 @@ function App() {
   
           void main() {
             vUv = uv;
-            vColor = vec4(color, 0.5 + smoothstep(0.0, 0.5, uv.y) * 0.5);
+            vColor = vec4(color, 0.5 + smoothstep(0.0, 0.2, uv.y) * 0.5);
   
             vec3 pos = vec3(position.x * uCx, position.y * uCy, 0.0);
             vec2 sprev = vec2(prev.x * uCx, prev.y * uCy);
